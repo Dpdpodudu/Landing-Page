@@ -55,7 +55,18 @@
 
 .menu {
   box-sizing: border-box;
-  padding: 24px 20px 40px 48px;
+  
+  // Отступы точно как у шапки для всех устройств
+  padding: 28px 20px 40px;
+
+  @media (min-width: $bp-tablet) {
+    padding: 36px 73px 65px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding: 36px 120px 92px;
+  }
+
   height: 100vh;
   background-color: $color-bg-menu;
   font-weight: 700;

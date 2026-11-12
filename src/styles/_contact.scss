@@ -30,16 +30,16 @@
 
   &__wrapper {
     display: flex;
-    flex-direction: column; // На мобилках друг под другом
+    flex-direction: column; 
     gap: 48px;
 
     @media (min-width: $bp-tablet) {
-      flex-direction: row; // На планшетах и ПК — в ряд
+      flex-direction: row; 
       gap: 24px;
     }
 
     @media (min-width: $bp-desktop) {
-      gap: 64px; // Большой отступ между колонками, как на макете
+      gap: 64px; 
     }
   }
 
@@ -50,7 +50,7 @@
     width: 100%;
 
     @media (min-width: $bp-tablet) {
-      width: 50%; // На больших экранах форма занимает ровно половину
+      width: 50%; 
     }
   }
 
@@ -72,6 +72,16 @@
     height: 48px;
 
     @include form-element-states;
+
+    // ФИКС ФОНА ПРИ АВТОЗАПОЛНЕНИИ (перенесен в самый конец элемента)
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px $color-bg-input inset !important;
+      -webkit-text-fill-color: $color-text-main !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
   &__message {
@@ -81,6 +91,16 @@
     margin-bottom: 16px;
 
     @include form-element-states;
+
+    // ФИКС ФОНА ПРИ АВТОЗАПОЛНЕНИИ (перенесен в самый конец элемента)
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px $color-bg-input inset !important;
+      -webkit-text-fill-color: $color-text-main !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
   &__button {

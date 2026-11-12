@@ -31,3 +31,32 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/Dpdpodudu/Landing-Page.git](https://github.com/Dpdpodudu/Landing-Page.git)
+   ```
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd Landing-Page
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server:**
+   ```bash
+   npm start
+   ```
+   *The project will open automatically in your default browser.*
+
+## 📦 Build and Deployment
+
+To create a production-ready build:
+```bash
+npm run build
+```
+
+To deploy the project to GitHub Pages:
+```bash
+npm run deploy
+```
